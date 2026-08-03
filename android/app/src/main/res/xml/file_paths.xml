@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Documentos/PixelPainter -->
+    <external-path name="my_images" path="." />
+    <!-- Android/data/com.pixelpainter.app/files (usado se Documentos for bloqueado) -->
+    <external-files-path name="my_external_files" path="." />
+    <cache-path name="my_cache_images" path="." />
+    <files-path name="my_files" path="." />
+</paths>

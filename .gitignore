@@ -1,0 +1,16 @@
+node_modules/
+dist/
+dev-dist/
+.tmp-*
+shot-*.png
+*.local
+.DS_Store
+tsconfig.tsbuildinfo
+
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/.idea/
+android/app/src/main/assets/public/
+tests/.apk-progress.log

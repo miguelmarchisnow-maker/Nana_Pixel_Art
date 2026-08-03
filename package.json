@@ -1,0 +1,39 @@
+{
+  "name": "pixel-painter",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc -b --noEmit && vite build",
+    "preview": "vite preview --host --port 4173",
+    "icons": "node scripts/make-icons.mjs",
+    "test": "npm run test:core && npm run test:ui",
+    "test:core": "esbuild tests/core.test.ts --bundle --platform=node --format=esm --target=node18 --outfile=.tmp-core.mjs --log-level=warning && node .tmp-core.mjs",
+    "test:ui": "node tests/ui.test.mjs",
+    "apk": "node scripts/build-apk.mjs",
+    "apk:release": "node scripts/build-apk.mjs --release",
+    "android:open": "npx cap open android",
+    "test:apk": "node tests/apk.test.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.1",
+    "@capacitor/app": "^6.0.3",
+    "@capacitor/core": "^6.2.1",
+    "@capacitor/filesystem": "^6.0.4",
+    "@capacitor/share": "^6.0.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "puppeteer-core": "^23.11.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vite-plugin-pwa": "^0.21.1"
+  }
+}
